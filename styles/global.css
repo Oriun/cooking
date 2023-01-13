@@ -1,0 +1,67 @@
+:root {
+    --main-color: #ed6454;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+html {
+    background: url("../assets/pexels-ella-olsson-1640774.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    background-color: white;
+    /* #f5f5f5;*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 40px calc((100vw - 900px) / 2);
+    padding: 0 24px 40px;
+    border-radius: 24px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+
+}
+
+body,
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#search-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+header {
+    height: 340px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px 40px;
+}
+
+.logo {
+    height: 100%;
+    width: auto;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

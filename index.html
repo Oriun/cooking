@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/card.css">
+    <link rel="stylesheet" href="styles/inputs.css">
+</head>
+
+<body>
+    <header>
+        <img alt="Logo du site" class="logo" src="assets/logo.png">
+    </header>
+    <main>
+        <section id="filters">
+            <div class="searchbar">
+                <input type="text" name="" id="search-input" placeholder="Rechercher..." />
+            </div>
+            <div class="selects">
+                <div id="ingredients-input"></div>
+                <div id="appliances-input"></div>
+                <div id="ustensils- input"></div>
+            </div>
+        </section>
+        <section id="search-list"></section>
+    </main>
+    <footer>Pas d'autres recettes !</footer>
+    <template id="recipe_card">
+        <div class="card">
+            <h5 class="name"></h5>
+            <p class="details">
+                <span class="time"></span> -
+                <span class="serving"></span>
+            </p>
+            <p class="ingredients"></p>
+            <button class="btn">Voir la recette</button>
+        </div>
+    </template>
+</body>
+
+<script src="data/recipes.js"></script>
+<script src="scripts/card.js"></script>
+<script src="scripts/filter.js"></script>
+<script src="scripts/inputs.js"></script>
+<script src="scripts/index.js"></script>
+
+</html>

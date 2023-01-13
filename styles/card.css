@@ -1,0 +1,36 @@
+.card {
+    border: 1px solid lightgray;
+    padding: 24px 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .name {
+    font: 600 1.2rem 'Open Sans', sans-serif;
+    margin-bottom: 16px;
+}
+
+.card .details {
+    font: 400 1rem 'Open Sans', sans-serif;
+    margin-bottom: 8px;
+}
+
+.card .ingredients {
+    font: 400 1rem 'Open Sans', sans-serif;
+    margin-bottom: 12px;
+}
+
+.card .btn {
+    width: fit-content;
+    font: 400 1rem 'Open Sans', sans-serif;
+    background-color: var(--main-color);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.card .btn:hover {
+    filter: brightness(1.2);
+}
