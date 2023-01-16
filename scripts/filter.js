@@ -12,9 +12,9 @@ function getKeywords(data) {
   }
 
   return {
-    appliances,
-    ustensils,
-    ingredients
+    appliances: Array.from(appliances),
+    ustensils: Array.from(ustensils),
+    ingredients: Array.from(ingredients)
   };
 }
 
@@ -22,6 +22,30 @@ function normalizeAppliances() {
   for (let i = 0; i < recipes.length; i++) {
     if (["Casserolle", "Casserolle."].includes(recipes[i].appliance))
       recipes[i].appliance = "Casserole";
+    if (recipes[i].ustensils.includes("Cuillère en bois"))
+      recipes[i].ustensils.splice(
+        recipes[i].ustensils.indexOf("Cuillère en bois"),
+        1,
+        "cuillère en bois"
+      );
+    if (recipes[i].ustensils.includes("Cuillère à Soupe"))
+      recipes[i].ustensils.splice(
+        recipes[i].ustensils.indexOf("Cuillère à Soupe"),
+        1,
+        "cuillère à Soupe"
+      );
+    if (recipes[i].ustensils.includes("Poelle à frire"))
+      recipes[i].ustensils.splice(
+        recipes[i].ustensils.indexOf("Poelle à frire"),
+        1,
+        "poelle à frire"
+      );
+    if (recipes[i].ustensils.includes("Économe"))
+      recipes[i].ustensils.splice(
+        recipes[i].ustensils.indexOf("Économe"),
+        1,
+        "économe"
+      );
   }
 }
 
@@ -60,7 +84,7 @@ function matchesKeywords(appliances, ustensils, ingredients) {
 
     if (ingredients.length > 0) {
       for (const ingredient of ingredients) {
-        if (!ingredients.find((item) => item.ingredient === ingredient))
+        if (!recipe.ingredients.find((item) => item.ingredient === ingredient))
           return false;
       }
     }

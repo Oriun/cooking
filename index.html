@@ -20,10 +20,11 @@
             <div class="searchbar">
                 <input type="text" name="" id="search-input" placeholder="Rechercher..." />
             </div>
+            <div id="selected-keywords"></div>
             <div class="selects">
                 <div id="ingredients-input"></div>
                 <div id="appliances-input"></div>
-                <div id="ustensils- input"></div>
+                <div id="ustensils-input"></div>
             </div>
         </section>
         <section id="search-list"></section>
@@ -38,6 +39,18 @@
             </p>
             <p class="ingredients"></p>
             <button class="btn">Voir la recette</button>
+        </div>
+    </template>
+    <template id="custom_select">
+        <div class="custom-select">
+            <div class="select-trigger">
+                <span class="select-name"></span>
+                <div class="arrow"></div>
+            </div>
+            <div class="select-options">
+                <input type="text" class="search-input" placeholder="Rechercher..." />
+                <div class="options"></div>
+            </div>
         </div>
     </template>
 </body>

@@ -17,3 +17,107 @@
     font: 400 1rem 'Open Sans', sans-serif;
     color: #333;
 }
+
+/* <div class="custom-select">
+            <div class="select-trigger">
+                <span></span>
+                <div class="arrow"></div>
+            </div>
+            <div class="select-options">
+                <input type="text" class="search-input" placeholder="Rechercher..." />
+                <div class="options"></div>
+            </div>
+        </div> */
+
+.custom-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    padding: 0 16px;
+    height: 40px;
+    border-radius: 6px;
+    user-select: none;
+    z-index: 1;
+}
+
+.custom-select .select-trigger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.custom-select .select-trigger .arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid white;
+    margin-left: 8px;
+}
+
+.custom-select .select-options {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    background-color: inherit;
+    border-radius: 6px;
+}
+
+.custom-select .select-options input {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: inherit;
+    font: inherit;
+    padding: 0 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.custom-select .select-options input::placeholder {
+    color: inherit;
+    opacity: 0.6;
+}
+
+.custom-select .select-options .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+    background-color: inherit;
+}
+
+.custom-select .select-options .options * {
+    cursor: pointer;
+}
+
+.custom-select.open {
+    z-index: 10;
+}
+
+.custom-select.open .select-options {
+    display: block;
+}
+
+.selected-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.selected-option:hover {
+    filter: brightness(.8);
+}
